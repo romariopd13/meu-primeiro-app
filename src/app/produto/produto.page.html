@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button fill="outline" (click)="back()">
+      <ion-icon slot="start" name="arrow-back"></ion-icon>
+    </ion-button>
+    <ion-title>Produto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-item>
+    <ion-label position="floating">Nome</ion-label>
+    <ion-input [(ngModel)]="produto.nome"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Descrição</ion-label>
+    <ion-input [(ngModel)]="produto.descricao"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Preço</ion-label>
+    <ion-input [(ngModel)]="produto.preco"></ion-input>
+  </ion-item>
+</ion-content>
+<ion-footer class="ion-padding">
+  <ion-button expand="full" [disabled]="!produto.nome" (click)="enviarProduto()">Salvar</ion-button>
+
+</ion-footer>
